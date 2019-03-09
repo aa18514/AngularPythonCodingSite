@@ -37,7 +37,6 @@ def testCasesCodeRun():
         error_code = ""
         while additionalCode:
             codetorun = str(temp)+"\n"+"value=" +additionalCode
-            print(codetorun)
             with stdoutIO() as s:
                 try:
                     exec(codetorun)
@@ -45,7 +44,7 @@ def testCasesCodeRun():
                     error_code = exp
             answer = answerFile.readline()
             local_environ = locals()
-            returnValue = (answer == local_environ['value'])
+            returnValue = (answer[:-1] ==  str(local_environ['value']))
             text = additionalCode + "|" + answer + "|" + str(local_environ['value']) + "|" + str(returnValue)
             returnObj.append(text)
             additionalCode = file_handle.readline()
