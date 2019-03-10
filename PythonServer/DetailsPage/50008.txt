@@ -1,15 +1,9 @@
-near_ten(12)
-near_ten(17)
-near_ten(19)
-near_ten(31)
-near_ten(6)
-near_ten(10)
-near_ten(11)
-near_ten(21)
-near_ten(22)
-near_ten(23)
-near_ten(54)
-near_ten(155)
-near_ten(158)
-near_ten(3)
-near_ten(1)
+Logic-1 > near_ten
+
+Given a non-negative number "num", return True if num is within 2 of a multiple of 10.
+Note: (a % b) is the remainder of dividing a by b, so (7 % 5) is 2.
+
+
+near_ten(12) → True
+near_ten(17) → False
+near_ten(19) → True
