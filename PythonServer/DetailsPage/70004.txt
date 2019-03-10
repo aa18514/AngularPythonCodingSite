@@ -1,14 +1,10 @@
-end_other('Hiabc', 'abc')
-end_other('Abc', 'HiaBc')
-end_other('abc', 'abXabc')
-end_other('Hiabc', 'abcd')
-end_other('Hiabc', 'bc')
-end_other(Hiabcx', 'bc')
-end_other('abc', 'abc')
-end_other('xyz', '12xyz')
-end_other('yz', '12xz')
-end_other('Z', '12xz')
-end_other('12', '12')
-end_other('abcXYZ', 'abcDEF')
-end_other('ab', 'ab12')
-end_other('ab', '12ab')
+String-2 > end_other
+
+Given two strings, return True if either of the strings appears at the very end of the other
+string, ignoring upper/lower case differences (in other words, the computation should not
+be "case sensitive"). Note: s.lower() returns the lowercase version of a string.
+
+
+end_other('Hiabc', 'abc') → True
+end_other('AbC', 'HiaBc') → True
+end_other('abc', 'abXabc') → True
