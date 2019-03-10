@@ -16,12 +16,21 @@ CORS(app)
 
 @app.route('/fortestingpurpose', methods=['POST'])
 def testingpurpose():
-    f = open("TestCasesCode/10003.txt")
+    f = open("TestCasesCode/10003.txt", encoding='utf-8')
     line = f.readline()
     while line:
         print(line)
         line = f.readline()
     return jsonify({'result':'testing'})
+
+
+@app.route('/solutioncode', methods=['POST'])
+def SolutionCode():
+    if request.method == "POST":
+        content = request.get_json()
+        idForQues = content['id']
+        f = open("SolutionCode/" + str(idForQues) + ".txt")
+        return jsonify({'result' : f.read()})
 
 
 @app.route('/testcasescoderun', methods=['POST'])
@@ -55,7 +64,7 @@ def testCasesCodeRun():
 @app.route("/questions")
 def GetQuestions():
     arr = []
-    with open('MainPage/main.txt') as f:
+    with open('MainPage/main.txt', encoding='utf-8') as f:
         lines = f.readlines()
     for line in lines:
         arr.append(line.strip().split(",")[1])
@@ -88,7 +97,7 @@ def analyzeText():
                 exec(temp)
             except Exception as exp:
                 error_code = exp
-        answer = open("Code/"+str(content['id'])+".txt", "r")
+        answer = open("Code/"+str(content['id'])+".txt", "r", encoding='utf-8')
         answer = answer.read()
         print(error_code)
         returnValue = (answer == s.getValue())
@@ -105,7 +114,7 @@ def QuestionDescription():
     if request.method == "POST":
         content = request.get_json()
         temp = content['id']
-        f = open("DetailsPage/"+str(temp)+".txt", "r")
+        f = open("DetailsPage/"+str(temp)+".txt", "r", encoding='utf-8')
         code = f.read()
         print("MainPage/{}.txt".format(str(temp)))
         print(code)
