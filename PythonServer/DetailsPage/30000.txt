@@ -1,10 +1,8 @@
-hello_name('Bob')
-hello_name('Alice')
-hello_name('X')
-hello_name('Dolly')
-hello_name('Alpha')
-hello_name('Omega')
-hello_name('Goodbye')
-hello_name('ho ho ho')
-hello_name('xyz!')
-hello_name('Hello')
+String-1 > hello_name
+
+Given a string name, e.g. "Bob", return a greeting of the form "Hello Bob!".
+
+
+hello_name('Bob') → 'Hello Bob!'
+hello_name('Alice') → 'Hello Alice!'
+hello_name('X') → 'Hello X!'

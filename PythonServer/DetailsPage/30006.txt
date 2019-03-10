@@ -1,7 +1,8 @@
-first_half('WooHoo')
-first_half('HelloThere')
-first_half('abcdef')
-first_half('ab')
-first_half(")
-first_half('0123456789')
-first_half('kitten')
+String-1 > first_half
+
+Given a string of even length, return the first half. So the string "WooHoo" yields "Woo".
+
+
+first_half('WooHoo') → 'Woo'
+first_half('HelloThere') → 'Hello'
+first_half('abcdef') → 'abc'
